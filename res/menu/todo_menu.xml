@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/menuAdd"
+		android:title="@string/add_todo_item" 
+		android:showAsAction="ifRoom|withText" 
+		android:icon="@drawable/ic_action_new" />
+	
+	<item android:id="@+id/menuEdit"
+		android:title="@string/edit_todo_item" 
+		android:showAsAction="ifRoom|withText" 
+		android:icon="@drawable/ic_action_edit" />
+</menu>

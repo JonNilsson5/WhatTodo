@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WhatTodo</string>
+	<string name="add_todo_item">Add something to do</string>
+	<string name="edit_todo_item">Edit what to do</string>
+	<string name="add_todo_item_header">Describe what you want to do.</string>
+	<string name="add">Add</string>
+</resources>

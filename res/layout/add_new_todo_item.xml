@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/header" 
+        android:layout_marginTop="20dp"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="@dimen/modal_content_side_margin"
+    	android:layout_marginRight="@dimen/modal_content_side_margin"
+	    android:textColor="@color/black"
+	    android:text="@string/add_todo_item_header" />
+    
+    <EditText
+        android:id="@+id/description"
+        android:inputType="text"
+        android:layout_below="@+id/header"
+        android:textColor="@color/black"
+	    android:layout_marginLeft="@dimen/modal_content_side_margin"
+    	android:layout_marginRight="@dimen/modal_content_side_margin"
+     	android:layout_width="match_parent"
+	    android:layout_height="wrap_content" />
+    
+    <Button
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:textColor="@color/black"
+	    android:text="@string/add"/>
+        
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="modal_vertical_margin">40dp</dimen>
+    <dimen name="modal_horizontal_margin">15dp</dimen>
+    <dimen name="modal_content_side_margin">10dp</dimen>
+</resources>
