@@ -6,5 +6,14 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry exported="true" kind="lib" path="/Users/jonnilsson/Documents/workspace/WhatTodo/google-gson-2.2.4/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="/Users/jonnilsson/.m2/repository/com/google/android/android/1.5_r4/android-1.5_r4.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="com.google.android"/>
+			<attribute name="maven.artifactId" value="android"/>
+			<attribute name="maven.version" value="1.5_r4"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

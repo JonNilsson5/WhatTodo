@@ -1,13 +1,13 @@
 package com.example.whattodo.views;
 
-import com.example.whattodo.R;
-
 import android.app.Activity;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+
+import com.example.whattodo.R;
 
 public class AddNewTodoItemView extends RelativeLayout {
 	

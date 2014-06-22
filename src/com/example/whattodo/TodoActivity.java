@@ -1,7 +1,5 @@
 package com.example.whattodo;
 
-import com.example.whattodo.views.AddNewTodoItemView;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.SharedPreferences;
@@ -9,10 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ListView;
 
+import com.example.whattodo.views.AddNewTodoItemView;
 import com.mobeta.android.dslv.*;
 
 /**
@@ -45,8 +41,8 @@ public class TodoActivity extends Activity {
 	        if (from != to)
 	        {
 	            TodoItem item = (TodoItem) adapter.getItem(from);
-	            todoItemStorage.MoveItem(item, to);
-	            adapter.RefreshItems(todoItemStorage.GetItems());
+	            todoItemStorage.moveItem(item, to);
+	            adapter.refreshItems(todoItemStorage.getItems());
 	        }
 	    }
 	};
@@ -64,44 +60,36 @@ public class TodoActivity extends Activity {
 	}
 	
 	private void initializeAdapter() {
-		adapter = new TodoAdapter(this, todoItemStorage.GetItems());
+		adapter = new TodoAdapter(this, todoItemStorage.getItems());
+		
 		DragSortController controller = new DragSortController(listView);
 		controller.setRemoveEnabled(false);
-	    controller.setSortEnabled(true);
-	    controller.setDragInitMode(1);
-	            //controller.setRemoveMode(removeMode);
 
 	    listView.setFloatViewManager(controller);
 	    listView.setOnTouchListener(controller);
 	    listView.setDragEnabled(true);
 		listView.setDropListener(onDrop);
 		listView.setAdapter(adapter);
+		
 	}
 	
-	private void MoveItem(TodoItem item, int toPosition)
+	private void moveItem(TodoItem item, int toPosition)
 	{
-		todoItemStorage.MoveItem(item, toPosition);
-		adapter.RefreshItems(todoItemStorage.GetItems());
+		todoItemStorage.moveItem(item, toPosition);
+		//adapter.RefreshItems(todoItemStorage.GetItems());
 	}
 	
-	private void AddItem(TodoItem item)
+	private void addItem(TodoItem item)
 	{
-		todoItemStorage.AddItem(item);
-		adapter.RefreshItems(todoItemStorage.GetItems());
+		todoItemStorage.addItem(item);
+		//adapter.RefreshItems(todoItemStorage.GetItems());
 	}
 	
-	private void RemoveItem(TodoItem item)
+	private void removeItem(TodoItem item)
 	{
-		todoItemStorage.RemoveItem(item);
-		adapter.RefreshItems(todoItemStorage.GetItems());
+		todoItemStorage.removeItem(item);
+		//adapter.RefreshItems(todoItemStorage.GetItems());
 	}
-
-	Handler mHideHandler = new Handler();
-	Runnable mHideRunnable = new Runnable() {
-		@Override
-		public void run() {
-		}
-	};
 
 	private Dialog dialog;
 	
@@ -138,13 +126,13 @@ public class TodoActivity extends Activity {
 
 	private void addNewItem() {
 		AddNewTodoItemView addNewTodoItemView = new AddNewTodoItemView (this);
-		dialog = UIUtils.CreateModal(addNewTodoItemView, this);
+		dialog = UIUtils.createModal(addNewTodoItemView, this);
 		addNewTodoItemView.setOnSaveListener(new AddNewTodoItemView.OnSaveListener()
 		{
 			@Override
 			public void onSave(String string)
 			{
-				AddItem(new TodoItem(string, todoItemStorage.getNextId()));
+				addItem(new TodoItem(string, todoItemStorage.getNextId()));
 				if(dialog != null)
 				{
 					dialog.dismiss();

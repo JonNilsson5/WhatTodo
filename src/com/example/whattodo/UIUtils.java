@@ -10,7 +10,7 @@ import android.widget.FrameLayout;
 
 public final class UIUtils {
 
-	public static Dialog CreateModal (View view, Context context)
+	public static Dialog createModal (View view, Context context)
 	{
 		FrameLayout wrapper = new FrameLayout (context);
 		int horizontalPadding = context.getResources().getDimensionPixelSize(R.dimen.modal_horizontal_margin);

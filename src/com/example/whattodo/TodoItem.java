@@ -23,4 +23,10 @@ public class TodoItem
 	{
 		return id;
 	}
+	
+	@Override
+	public String toString()
+	{
+		return whatTodo;
+	}
 }

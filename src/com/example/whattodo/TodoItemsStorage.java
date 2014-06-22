@@ -4,10 +4,10 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.SharedPreferences;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
-import android.content.SharedPreferences;
 
 public class TodoItemsStorage {
 	private static final String TODO_ITEMS_STRING = "todoItems";
@@ -20,46 +20,46 @@ public class TodoItemsStorage {
 	public TodoItemsStorage(SharedPreferences settings)
 	{
 		this.settings = settings;
-		Load();
+		load();
 	}
 	
-	public List<TodoItem> GetItems()
+	public List<TodoItem> getItems()
 	{
 		return items;
 	}
 	
-	public void SetItems(List<TodoItem> items)
+	public void setItems(List<TodoItem> items)
 	{
 		this.items = items;
-		Save();
+		save();
 	}
 	
-	public void AddItem(TodoItem item)
+	public void addItem(TodoItem item)
 	{
 		items.add(0, item);
-		Save();
+		save();
 	}
 	
-	public void MoveItem(TodoItem item, int toPosition)
+	public void moveItem(TodoItem item, int toPosition)
 	{
 		items.remove(item);
 		items.add(toPosition, item);
-		Save();
+		save();
 	}
 	
-	public void Clear()
+	public void clear()
 	{
 		items.clear();
-		Save();
+		save();
 	}
 	
-	public void RemoveItem(TodoItem item)
+	public void removeItem(TodoItem item)
 	{
 		items.remove(item);
-		Save();
+		save();
 	}
 	
-	public void Load ()
+	public void load ()
 	{
 		String serializedItems = settings.getString(TODO_ITEMS_STRING, "[]");
 		Type type = new TypeToken<ArrayList<TodoItem>>() {}.getType();
@@ -67,7 +67,7 @@ public class TodoItemsStorage {
 		currentId = settings.getInt(CURRENT_ID_STRING, 0);	
 	}
 	
-	public void Save ()
+	public void save ()
 	{
 		String serializedItems = gson.toJson(items);
 		SharedPreferences.Editor editor = settings.edit();
