@@ -201,7 +201,6 @@ containing a value of this type.
         public static final int header=0x7f040007;
         public static final int listView=0x7f040006;
         public static final int menuAdd=0x7f04000c;
-        public static final int menuRemove=0x7f04000d;
         public static final int onDown=0x7f040002;
         public static final int onLongPress=0x7f040004;
         public static final int onMove=0x7f040003;

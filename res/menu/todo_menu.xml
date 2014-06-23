@@ -4,9 +4,4 @@
 		android:title="@string/add_todo_item" 
 		android:showAsAction="ifRoom|withText" 
 		android:icon="@drawable/ic_action_new" />
-	
-	<item android:id="@+id/menuRemove"
-		android:title="@string/remove_todo_item" 
-		android:showAsAction="ifRoom|withText" 
-		android:icon="@drawable/ic_action_discard" />
 </menu>
