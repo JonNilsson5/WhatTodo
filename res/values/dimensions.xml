@@ -3,4 +3,6 @@
     <dimen name="modal_vertical_margin">40dp</dimen>
     <dimen name="modal_horizontal_margin">15dp</dimen>
     <dimen name="modal_content_side_margin">10dp</dimen>
+    <dimen name="todo_row_side_margin">10dp</dimen>
+    <dimen name="todo_row_height">50dp</dimen>
 </resources>

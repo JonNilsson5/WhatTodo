@@ -5,8 +5,8 @@
 		android:showAsAction="ifRoom|withText" 
 		android:icon="@drawable/ic_action_new" />
 	
-	<item android:id="@+id/menuEdit"
-		android:title="@string/edit_todo_item" 
+	<item android:id="@+id/menuRemove"
+		android:title="@string/remove_todo_item" 
 		android:showAsAction="ifRoom|withText" 
-		android:icon="@drawable/ic_action_edit" />
+		android:icon="@drawable/ic_action_discard" />
 </menu>

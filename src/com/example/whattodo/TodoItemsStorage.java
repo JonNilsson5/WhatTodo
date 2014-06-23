@@ -16,59 +16,51 @@ public class TodoItemsStorage {
 	private List<TodoItem> items;
 	private Gson gson = new Gson();
 	private int currentId;
-	
-	public TodoItemsStorage(SharedPreferences settings)
-	{
+
+	public TodoItemsStorage(SharedPreferences settings) {
 		this.settings = settings;
 		load();
 	}
-	
-	public List<TodoItem> getItems()
-	{
+
+	public List<TodoItem> getItems() {
 		return items;
 	}
-	
-	public void setItems(List<TodoItem> items)
-	{
+
+	public void setItems(List<TodoItem> items) {
 		this.items = items;
 		save();
 	}
-	
-	public void addItem(TodoItem item)
-	{
+
+	public void addItem(TodoItem item) {
 		items.add(0, item);
 		save();
 	}
-	
-	public void moveItem(TodoItem item, int toPosition)
-	{
+
+	public void moveItem(TodoItem item, int toPosition) {
 		items.remove(item);
 		items.add(toPosition, item);
 		save();
 	}
-	
-	public void clear()
-	{
+
+	public void clear() {
 		items.clear();
 		save();
 	}
-	
-	public void removeItem(TodoItem item)
-	{
+
+	public void removeItem(TodoItem item) {
 		items.remove(item);
 		save();
 	}
-	
-	public void load ()
-	{
+
+	public void load() {
 		String serializedItems = settings.getString(TODO_ITEMS_STRING, "[]");
-		Type type = new TypeToken<ArrayList<TodoItem>>() {}.getType();
+		Type type = new TypeToken<ArrayList<TodoItem>>() {
+		}.getType();
 		items = gson.fromJson(serializedItems, type);
-		currentId = settings.getInt(CURRENT_ID_STRING, 0);	
+		currentId = settings.getInt(CURRENT_ID_STRING, 0);
 	}
-	
-	public void save ()
-	{
+
+	public void save() {
 		String serializedItems = gson.toJson(items);
 		SharedPreferences.Editor editor = settings.edit();
 		editor.putString(TODO_ITEMS_STRING, serializedItems);

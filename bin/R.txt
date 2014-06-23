@@ -163,6 +163,8 @@ int dimen abc_search_view_text_min_width 0x7f08000c
 int dimen modal_content_side_margin 0x7f080013
 int dimen modal_horizontal_margin 0x7f080012
 int dimen modal_vertical_margin 0x7f080011
+int dimen todo_row_height 0x7f080015
+int dimen todo_row_side_margin 0x7f080014
 int drawable abc_ab_bottom_solid_dark_holo 0x7f020000
 int drawable abc_ab_bottom_solid_light_holo 0x7f020001
 int drawable abc_ab_bottom_transparent_dark_holo 0x7f020002
@@ -250,9 +252,11 @@ int drawable abc_textfield_searchview_holo_dark 0x7f020053
 int drawable abc_textfield_searchview_holo_light 0x7f020054
 int drawable abc_textfield_searchview_right_holo_dark 0x7f020055
 int drawable abc_textfield_searchview_right_holo_light 0x7f020056
-int drawable ic_action_edit 0x7f020057
-int drawable ic_action_new 0x7f020058
-int drawable ic_launcher 0x7f020059
+int drawable ic_action_accept 0x7f020057
+int drawable ic_action_discard 0x7f020058
+int drawable ic_action_new 0x7f020059
+int drawable ic_action_remove 0x7f02005a
+int drawable ic_launcher 0x7f02005b
 int id action_bar 0x7f050021
 int id action_bar_activity_content 0x7f05001a
 int id action_bar_container 0x7f050020
@@ -268,6 +272,7 @@ int id activity_chooser_view_content 0x7f05002a
 int id add 0x7f050045
 int id always 0x7f050010
 int id beginning 0x7f050016
+int id checkBox 0x7f050047
 int id checkbox 0x7f050032
 int id clickRemove 0x7f050000
 int id collapseActionView 0x7f050012
@@ -291,8 +296,8 @@ int id image 0x7f05002c
 int id listMode 0x7f050006
 int id listView 0x7f050042
 int id list_item 0x7f05002e
-int id menuAdd 0x7f050047
-int id menuEdit 0x7f050048
+int id menuAdd 0x7f050048
+int id menuRemove 0x7f050049
 int id middle 0x7f050017
 int id never 0x7f05000e
 int id none 0x7f050015
@@ -320,9 +325,9 @@ int id showTitle 0x7f05000b
 int id split_action_bar 0x7f050023
 int id submit_area 0x7f05003e
 int id tabMode 0x7f050007
+int id textView 0x7f050046
 int id title 0x7f050030
 int id top_action_bar 0x7f050025
-int id tv 0x7f050046
 int id up 0x7f050026
 int id useLogo 0x7f050008
 int id withText 0x7f050011
@@ -373,12 +378,9 @@ int string add 0x7f0a0011
 int string add_todo_item 0x7f0a000e
 int string add_todo_item_header 0x7f0a0010
 int string app_name 0x7f0a000d
-int string edit_todo_item 0x7f0a000f
-int style AppBaseTheme 0x7f0b0083
-int style AppTheme 0x7f0b0084
-int style ButtonBar 0x7f0b0087
-int style ButtonBarButton 0x7f0b0088
-int style FullscreenActionBarStyle 0x7f0b0089
+int string remove_todo_item 0x7f0a000f
+int style AppBaseTheme 0x7f0b0085
+int style FullscreenActionBarStyle 0x7f0b0087
 int style FullscreenTheme 0x7f0b0086
 int style TextAppearance_AppCompat_Base_CompactMenu_Dialog 0x7f0b0063
 int style TextAppearance_AppCompat_Base_SearchResult 0x7f0b006d
@@ -511,7 +513,8 @@ int style Widget_AppCompat_PopupMenu 0x7f0b002b
 int style Widget_AppCompat_ProgressBar 0x7f0b000a
 int style Widget_AppCompat_ProgressBar_Horizontal 0x7f0b0009
 int style Widget_AppCompat_Spinner_DropDown_ActionBar 0x7f0b0022
-int style myDialogTheme 0x7f0b0085
+int style myDialogTheme 0x7f0b0083
+int style myTheme 0x7f0b0084
 int[] styleable ActionBar { 0x7f010033, 0x7f010034, 0x7f010035, 0x7f010036, 0x7f010037, 0x7f010038, 0x7f010039, 0x7f01003a, 0x7f01003b, 0x7f01003c, 0x7f01003d, 0x7f01003e, 0x7f01003f, 0x7f010040, 0x7f010041, 0x7f010042, 0x7f010043, 0x7f010044, 0x7f010045 }
 int styleable ActionBar_background 10
 int styleable ActionBar_backgroundSplit 12

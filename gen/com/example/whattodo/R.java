@@ -1051,6 +1051,8 @@ containing a value of this type.
         public static final int modal_content_side_margin=0x7f080013;
         public static final int modal_horizontal_margin=0x7f080012;
         public static final int modal_vertical_margin=0x7f080011;
+        public static final int todo_row_height=0x7f080015;
+        public static final int todo_row_side_margin=0x7f080014;
     }
     public static final class drawable {
         public static final int abc_ab_bottom_solid_dark_holo=0x7f020000;
@@ -1140,9 +1142,11 @@ containing a value of this type.
         public static final int abc_textfield_searchview_holo_light=0x7f020054;
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
-        public static final int ic_action_edit=0x7f020057;
-        public static final int ic_action_new=0x7f020058;
-        public static final int ic_launcher=0x7f020059;
+        public static final int ic_action_accept=0x7f020057;
+        public static final int ic_action_discard=0x7f020058;
+        public static final int ic_action_new=0x7f020059;
+        public static final int ic_action_remove=0x7f02005a;
+        public static final int ic_launcher=0x7f02005b;
     }
     public static final class id {
         public static final int action_bar=0x7f050021;
@@ -1160,6 +1164,7 @@ containing a value of this type.
         public static final int add=0x7f050045;
         public static final int always=0x7f050010;
         public static final int beginning=0x7f050016;
+        public static final int checkBox=0x7f050047;
         public static final int checkbox=0x7f050032;
         public static final int clickRemove=0x7f050000;
         public static final int collapseActionView=0x7f050012;
@@ -1183,8 +1188,8 @@ containing a value of this type.
         public static final int listMode=0x7f050006;
         public static final int listView=0x7f050042;
         public static final int list_item=0x7f05002e;
-        public static final int menuAdd=0x7f050047;
-        public static final int menuEdit=0x7f050048;
+        public static final int menuAdd=0x7f050048;
+        public static final int menuRemove=0x7f050049;
         public static final int middle=0x7f050017;
         public static final int never=0x7f05000e;
         public static final int none=0x7f050015;
@@ -1212,9 +1217,9 @@ containing a value of this type.
         public static final int split_action_bar=0x7f050023;
         public static final int submit_area=0x7f05003e;
         public static final int tabMode=0x7f050007;
+        public static final int textView=0x7f050046;
         public static final int title=0x7f050030;
         public static final int top_action_bar=0x7f050025;
-        public static final int tv=0x7f050046;
         public static final int up=0x7f050026;
         public static final int useLogo=0x7f050008;
         public static final int withText=0x7f050011;
@@ -1322,19 +1327,10 @@ containing a value of this type.
         public static final int add_todo_item=0x7f0a000e;
         public static final int add_todo_item_header=0x7f0a0010;
         public static final int app_name=0x7f0a000d;
-        public static final int edit_todo_item=0x7f0a000f;
+        public static final int remove_todo_item=0x7f0a000f;
     }
     public static final class style {
         /** 
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.s
-        
-
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
     
@@ -1346,14 +1342,8 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f0b0083;
-        /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
-         */
-        public static final int AppTheme=0x7f0b0084;
-        public static final int ButtonBar=0x7f0b0087;
-        public static final int ButtonBarButton=0x7f0b0088;
-        public static final int FullscreenActionBarStyle=0x7f0b0089;
+        public static final int AppBaseTheme=0x7f0b0085;
+        public static final int FullscreenActionBarStyle=0x7f0b0087;
         public static final int FullscreenTheme=0x7f0b0086;
         /**  Mimic text appearance in select_dialog_item.xml 
          */
@@ -1542,7 +1532,8 @@ containing a value of this type.
         public static final int Widget_AppCompat_ProgressBar=0x7f0b000a;
         public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0b0009;
         public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0b0022;
-        public static final int myDialogTheme=0x7f0b0085;
+        public static final int myDialogTheme=0x7f0b0083;
+        public static final int myTheme=0x7f0b0084;
     }
     public static final class styleable {
         /**  ============================================ 
